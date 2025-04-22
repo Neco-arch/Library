@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookTracker</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Top-Section">
+        <h2>Book Tracker</h2>
+        <div class="Button">
+            <dialog class="AddBookDialog">
+                <form>
+                  <p>
+                    <label>
+                      Title:
+                      <input type="text" class="title"  value="" id="title" required>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                        Author:
+                        <input type="text" class="author" value="" id="author" required>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                        Page:
+                        <input type="number" class="pages" min="1" value="" id="pages" required>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      Status:
+                      <select id="read-status" required>
+                        <option value="default">Choose…</option>
+                        <option value="Hasn't Start">Haven't Start</option>
+                        <option value="In Progress">In progress</option>
+                        <option value="Read">Read</option>
+                      </select>
+                    </label>
+                  </p>
+                  <div>
+                    <button value="cancel" formmethod="dialog" class="Cancel_Button">Cancel</button>
+                    <button id="confirmBtn" value="default">Confirm</button>
+                  </div>
+                </form>
+              </dialog>
+              <p>
+                <button class="AddBook">Add Book</button>
+              </p>
+              <output></output>
+        </div>
+    </div>
+    <div class="MiddleSection">
+      <div class="Card">
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>

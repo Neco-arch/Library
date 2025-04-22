@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto,sans-serif,Arial;
+}
+
+body {
+    background-color: wheat;
+}
+
+.Card {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 40px;
+    height: 100%;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.Top-Section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.AddBook {
+    height: 40px;
+    width: 150px;
+    font-weight: bold;
+    border-radius: 20px;
+    border-style: dotted;
+}
+
+.AddBook:hover {
+    background-color: #ccc;
+}
+
+
+dialog.AddBookDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    border: none;
+    border-radius: 12px;
+    padding: 20px 30px;
+    width: 320px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+dialog.AddBookDialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+dialog.AddBookDialog label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+dialog.AddBookDialog input,
+dialog.AddBookDialog select {
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+dialog.AddBookDialog button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+dialog.AddBookDialog button#confirmBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+dialog.AddBookDialog button#confirmBtn:hover {
+    background-color: #45a049;
+}
+
+dialog.AddBookDialog button[value="cancel"] {
+    background-color: #e0e0e0;
+    color: #333;
+    margin-right: 10px;
+}
+
+dialog.AddBookDialog button[value="cancel"]:hover {
+    background-color: #d5d5d5;
+}
+
+dialog.AddBookDialog div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.MiddleSection {
+    display: flex;
+    height: 100vh;
+    margin-top: 20px;
+}
+
+.Card-Example {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 
+                0 8px 40px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Card-Example:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1), 
+                0 12px 48px rgba(0, 0, 0, 0.05);
+}
+
+#Book_Name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+}
+
+#Book_Author, 
+#Book_Pages {
+    font-size: 18px;
+    color: #555;
+}
+
+.Read-Selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.Read-Selector:hover {
+    background-color: #eaeaea;
+}
+
+.Delete_Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff4d4f; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.Delete_Button:hover {
+    background-color: #d9363e; /* Slightly darker on hover */
+}

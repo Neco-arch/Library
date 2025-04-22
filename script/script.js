@@ -115,13 +115,9 @@ AddBookButton.addEventListener("click", (event) => {
 
 
 ConfirmButton.addEventListener("click", (event) => {
-  try {
-    addBookToLibrary(event);
-    AddBookDialog.close();
-  } catch (err) {
-    console.error("Failed to add book:", err);
-  }
-});
+  addBookToLibrary(event);
+  AddBookDialog.close();
+})
 
 CancelButton.addEventListener("click", () => {
   AddBookDialog.close()

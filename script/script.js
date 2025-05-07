@@ -5,11 +5,10 @@ const DeleteButton = document.querySelector(".Delete_Button")
 const CardSection = document.querySelector(".Card")
 const CancelButton = document.querySelector(".Cancel_Button")
 
-const myLibrary = [];
-
 class CreateBook {
   
   constructor(title,author,pages,read_status) {
+    this.myLibrary = []
     this.id = crypto.randomUUID();
     this.title = title;
     this.author = author;
@@ -17,19 +16,21 @@ class CreateBook {
     this.read_status = read_status;
   }
 
-  addBookToLibrary(BookData,titleInput,authorInput,pagesInput,readStatusInput) {
-    myLibrary.push(BookData);
 
-    const title = titleInput.value;  
-    const author = authorInput.value;
-    const pages = pagesInput.value;
-    const readstatus = readStatusInput.value;
+  addBookToLibrary(BookData,titleInput,authorInput,pagesInput,readStatusInput) {
+
+    this.myLibrary.push(BookData)
+    let title = titleInput.value;  
+    let author = authorInput.value;
+    let pages = pagesInput.value;
+    let readstatus = readStatusInput.value;
 
     this.addBookToTheUI(title,author,pages)
+
     title = "";
     author = "";
     pages = "";
-    readstatus = "Haven't Started";
+    readstatus = "";  
   }
 
   addBookToTheUI(title, author, pages) {
